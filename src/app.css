@@ -1,0 +1,8 @@
+.profile {
+  position: absolute;
+  text-outline: 0 0 #000;
+  top: 7%;
+  left: 53%;
+
+  border: 5px solid #17252a;
+}
