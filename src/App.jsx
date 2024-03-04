@@ -9,7 +9,7 @@ import { Box, Stack } from '@mui/material'
 function App() {
   return (
     <Box>
-      {/*  <Navbar /> */}
+      <Navbar />
 
       <Stack direction="row">
         <TopLeft />
