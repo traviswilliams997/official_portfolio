@@ -19,7 +19,7 @@ const Navbar = () => {
             fontWeight={700}
             color="#FEFFFF"
             mt="20px"
-            ml="100px"
+            ml="135px"
             sx={{ '&:hover': { color: '#2B7A78' } }}
           >
             {' '}

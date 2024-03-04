@@ -9,7 +9,7 @@ const TopLeft = () => {
       display="flex"
       justifyContent="center"
     >
-      <Stack>
+      <Stack mt="20px">
         <Typography variant="h2" fontWeight={700} color="#FEFFFF">
           Software
         </Typography>
