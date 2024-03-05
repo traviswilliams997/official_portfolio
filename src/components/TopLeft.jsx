@@ -22,8 +22,8 @@ const TopLeft = () => {
         </Typography>
         <Typography
           variant="h6"
-          fontWeight={400}
-          color="#2A7A78"
+          fontWeight={100}
+          color="#17252A"
           width="350px"
           mt="10px"
         >
