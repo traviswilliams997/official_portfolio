@@ -10,7 +10,7 @@ const Scroll = () => {
       flex={1}
       height="150px"
     >
-      <Typography variant="h3" color="#FEFFFF">
+      <Typography variant="h3" fontWeight={500} color="#DEF2F1">
         PROJECTS
       </Typography>
     </Box>

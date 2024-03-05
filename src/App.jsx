@@ -5,7 +5,8 @@ import ProjectInfo from './components/ProjectInfo'
 import Navbar from './components/Navbar'
 import Scroll from './components/Scroll'
 import About from './components/About'
-import { Box, Stack } from '@mui/material'
+import Contact from './components/Contact'
+import { Box, Stack, Typography } from '@mui/material'
 import { useState } from 'react'
 import './app.css'
 
@@ -60,6 +61,7 @@ function App() {
         <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709594630/huce8gijty7oc6atomxl.png" />
       </Stack>
       <About />
+      <Contact />
     </Box>
   )
 }
