@@ -11,7 +11,7 @@ const About = () => {
       flex={1}
     >
       <Typography variant="h2" color="#17252A">
-        About
+        ABOUT
       </Typography>
       <Typography variant="h5" color="#17252A" width="50vw">
         <b>I Am Grateful.</b> I am grateful for many things, but I am
