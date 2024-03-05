@@ -5,7 +5,7 @@ const TopLeft = () => {
     <Box
       bgcolor="#3AAFA9"
       flex={10}
-      height="400px"
+      height="42vh"
       display="flex"
       justifyContent="center"
     >
