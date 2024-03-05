@@ -5,9 +5,19 @@ import ProjectInfo from './components/ProjectInfo'
 import Navbar from './components/Navbar'
 import Scroll from './components/Scroll'
 import { Box, Stack } from '@mui/material'
+import { useState } from 'react'
 import './app.css'
 
 function App() {
+  const [volunteeringStack, setVolunteeringStack] = useState([
+    'REACT',
+    'MUI',
+    'NODE',
+    'EXPRESS',
+    'POSTGRES',
+  ])
+
+  const [etchStack, setEtchStack] = useState(['HTML', 'CSS', 'JAVASCRIPT'])
   return (
     <Box>
       <Navbar />
@@ -23,8 +33,28 @@ function App() {
       </Stack>
       <Scroll />
       <Stack direction="row">
-        <ProjectImage />
-        <ProjectInfo />
+        <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709589357/veprlo1rwdkwe3fplt38.png" />
+        <ProjectInfo
+          text={
+            'A platform to find volunteering agenices and events near you, post about your good deeds and make lasting connections.'
+          }
+          title={'Jamaica Volunteering Platform'}
+          repoLink={
+            'https://github.com/traviswilliams997/jamaica_volunteer_platform'
+          }
+          liveDemoLink={'https://jamaica-volunteer-platform.fly.dev/'}
+          stack={volunteeringStack}
+        />
+      </Stack>
+      <Stack direction="row">
+        <ProjectInfo
+          text={'A fun little website where you write in the sand.'}
+          title={'Etch-A-Sketch'}
+          repoLink={'https://github.com/traviswilliams997/ETCH-A-SKETCH'}
+          liveDemoLink={'https://traviswilliams997.github.io/ETCH-A-SKETCH/'}
+          stack={etchStack}
+        />
+        <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709594630/huce8gijty7oc6atomxl.png" />
       </Stack>
     </Box>
   )

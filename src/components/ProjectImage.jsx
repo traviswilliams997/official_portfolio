@@ -4,10 +4,13 @@ const ProjectImage = ({ imgUrl }) => {
   return (
     <Box
       display="flex"
-      bgcolor="#FEFFF"
-      border="20px solid  #DEF2F1"
+      bgcolor="#DEF2F1"
       flex={1}
-      height="400px"
+      height="450px"
+      pt="40px"
+      pl="30px"
+      pr="30px"
+      pb="30px"
     >
       <img className="project" src={imgUrl} width="100%"></img>
     </Box>

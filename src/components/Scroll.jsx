@@ -1,9 +1,18 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 const Scroll = () => {
   return (
-    <Box bgcolor="#17252A" flex={1} height="200px">
-      Scroll
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      bgcolor="#17252A"
+      flex={1}
+      height="150px"
+    >
+      <Typography variant="h3" color="#FEFFFF">
+        PROJECTS
+      </Typography>
     </Box>
   )
 }
