@@ -9,8 +9,9 @@ const About = () => {
       alignItems="center"
       bgcolor="#3AAFA9"
       flex={1}
+      p="80px"
     >
-      <Typography variant="h2" color="#17252A">
+      <Typography variant="h2" color="#17252A" pb="40px">
         ABOUT
       </Typography>
       <Typography variant="h5" color="#17252A" width="50vw">
