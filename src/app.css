@@ -3,6 +3,12 @@
   text-outline: 0 0 #000;
   top: 7%;
   left: 53%;
-
   border: 5px solid #17252a;
+  border-radius: 5%;
+}
+
+.project {
+  object-fit: stretch;
+  border-radius: 5%;
+  border: 2px solid #2b7a78;
 }
