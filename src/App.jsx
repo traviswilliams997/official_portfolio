@@ -3,7 +3,7 @@ import TopLeft from './components/TopLeft'
 import ProjectImage from './components/ProjectImage'
 import ProjectInfo from './components/ProjectInfo'
 import Navbar from './components/Navbar'
-import Scroll from './components/Scroll'
+import Break from './components/Break'
 import About from './components/About'
 import Contact from './components/Contact'
 import { Box, Stack, Typography } from '@mui/material'
@@ -14,9 +14,18 @@ function App() {
   const [volunteeringStack, setVolunteeringStack] = useState([
     'REACT',
     'MUI',
+    'REDUX',
     'NODE',
     'EXPRESS',
     'POSTGRES',
+  ])
+  const [scrapeStack, setScrapeStack] = useState([
+    'REACT',
+    'MUI',
+    'REDUX',
+    'NODE',
+    'EXPRESS',
+    'CHEERIO',
   ])
 
   const [etchStack, setEtchStack] = useState(['HTML', 'CSS', 'JAVASCRIPT'])
@@ -33,7 +42,7 @@ function App() {
         ></img>
         <TopRight />
       </Stack>
-      <Scroll />
+      <Break />
       <Stack direction="row">
         <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709589357/veprlo1rwdkwe3fplt38.png" />
         <ProjectInfo
@@ -51,6 +60,19 @@ function App() {
       <Stack direction="row">
         <ProjectInfo
           text={
+            "This website collects job postings from the offical Jamaican Ministry's career pages; so you can easily find them all in one place."
+          }
+          title={'MINISTRY JOBS JA'}
+          repoLink={'https://github.com/traviswilliams997/Ministry-Jobs-JA'}
+          liveDemoLink={'https://traviswilliams997.github.io/ETCH-A-SKETCH/'}
+          stack={scrapeStack}
+        />
+        <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709723720/zing3ta5hvavxlbdzan2.png" />
+      </Stack>
+      <Stack direction="row">
+        <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709724792/gkanyyhlgjsozmsbo47h.png" />
+        <ProjectInfo
+          text={
             'A fun little website where you write in the sand. This was project assigned in The Odin Project foundations section. Where I first learnt HTML, CSS and Javascript'
           }
           title={'Etch-A-Sketch'}
@@ -58,7 +80,6 @@ function App() {
           liveDemoLink={'https://traviswilliams997.github.io/ETCH-A-SKETCH/'}
           stack={etchStack}
         />
-        <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709594630/huce8gijty7oc6atomxl.png" />
       </Stack>
       <About />
       <Contact />
