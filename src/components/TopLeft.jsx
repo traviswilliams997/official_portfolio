@@ -5,11 +5,11 @@ const TopLeft = () => {
     <Box
       bgcolor="#3AAFA9"
       flex={10}
-      height="42vh"
+      height="46vh"
       display="flex"
       justifyContent="center"
     >
-      <Stack mt="20px">
+      <Stack mt="40px">
         <Typography variant="h2" fontWeight={700} color="#FEFFFF">
           Software
         </Typography>

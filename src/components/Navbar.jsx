@@ -3,10 +3,11 @@ import FlexBetween from './FlexBetween'
 import { styled } from '@mui/system'
 
 const NavLink = styled(Typography)(({}) => ({
-  color: '#17252A',
+  color: '#DEF2F1',
   fontWeight: '500',
   marginLeft: '20px',
   marginRight: '20px',
+  '&:hover': { borderBottom: '3px solid #DEF2F1' },
 }))
 
 const Navbar = () => {
@@ -44,24 +45,9 @@ const Navbar = () => {
         >
           <Stack mt="10px">
             <FlexBetween pt="5px">
-              <NavLink
-                variant="h5"
-                sx={{ '&:hover': { borderBottom: '3px solid #17252A' } }}
-              >
-                About
-              </NavLink>
-              <NavLink
-                variant="h5"
-                sx={{ '&:hover': { borderBottom: '3px solid #17252A' } }}
-              >
-                Projects
-              </NavLink>
-              <NavLink
-                variant="h5"
-                sx={{ '&:hover': { borderBottom: '3px solid #17252A' } }}
-              >
-                Contacts
-              </NavLink>
+              <NavLink variant="h5">About</NavLink>
+              <NavLink variant="h5">Projects</NavLink>
+              <NavLink variant="h5">Contacts</NavLink>
               <Button
                 sx={{
                   bgcolor: '#17252A',
@@ -72,10 +58,16 @@ const Navbar = () => {
                 }}
               >
                 <Typography
-                  color="#FEFFFF"
-                  variant="h6 "
-                  sx={{ '&:hover': { color: '#17252A', fontWeight: '800' } }}
-                  fontWeight={500}
+                  color="#DEF2F1"
+                  variant="h5 "
+                  fontSize="17px"
+                  sx={{
+                    '&:hover': {
+                      color: '#DEF2F1',
+                      fontWeight: '800',
+                    },
+                  }}
+                  fontWeight={700}
                 >
                   Resume
                 </Typography>

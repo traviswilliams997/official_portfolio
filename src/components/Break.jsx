@@ -8,9 +8,9 @@ const Break = () => {
       alignItems="center"
       bgcolor="#17252A"
       flex={1}
-      height="150px"
+      height="110px"
     >
-      <Typography variant="h3" fontWeight={500} color="#DEF2F1">
+      <Typography variant="h3" fontWeight={500} color="#FEFFFF">
         PROJECTS
       </Typography>
     </Box>
