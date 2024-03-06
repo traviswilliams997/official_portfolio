@@ -33,7 +33,7 @@ const Contact = () => {
         import.meta.env.VITE_TEMPLATE_ID,
         form.current,
         {
-          publicKey: 'Gg2Q9BGxPpnuq-6wL',
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
         }
       )
       .then(

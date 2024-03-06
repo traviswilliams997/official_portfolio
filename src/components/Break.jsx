@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 
-const Scroll = () => {
+const Break = () => {
   return (
     <Box
       display="flex"
@@ -17,4 +17,4 @@ const Scroll = () => {
   )
 }
 
-export default Scroll
+export default Break
