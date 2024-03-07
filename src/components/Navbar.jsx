@@ -33,7 +33,7 @@ const Navbar = () => {
           <Stack>
             {' '}
             <Typography
-              variant="h4"
+              variant="h3"
               fontWeight={700}
               color={light}
               mt="20px"
@@ -54,9 +54,9 @@ const Navbar = () => {
         >
           <Stack mt="10px">
             <FlexBetween pt="5px">
-              <NavLink variant="h5">Projects</NavLink>
-              <NavLink variant="h5">About</NavLink>
-              <NavLink variant="h5">Contacts</NavLink>
+              <NavLink variant="h4">Projects</NavLink>
+              <NavLink variant="h4">About</NavLink>
+              <NavLink variant="h4">Contacts</NavLink>
               <Button
                 sx={{
                   bgcolor: dark,
@@ -68,8 +68,7 @@ const Navbar = () => {
               >
                 <Typography
                   color={secondLight}
-                  variant="h5 "
-                  fontSize="17px"
+                  variant="h5"
                   sx={{
                     '&:hover': {
                       color: secondLight,

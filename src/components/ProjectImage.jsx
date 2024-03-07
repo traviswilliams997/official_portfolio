@@ -8,11 +8,10 @@ const ProjectImage = ({ imgUrl }) => {
       flex={1}
       height="450px"
       pt="40px"
-      pl="30px"
-      pr="30px"
+      pl="150px"
       pb="30px"
     >
-      <img className="project" src={imgUrl} width="100%"></img>
+      <img className="project" src={imgUrl} width={'1000px'}></img>
     </Box>
   )
 }
