@@ -13,8 +13,14 @@ import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import FlexBetween from './FlexBetween'
+import { theme } from '../theme'
 
 const Contact = () => {
+  const secondMain = theme.palette.secondary.main
+  const secondLight = theme.palette.secondary.light
+  const main = theme.palette.primary.main
+  const dark = theme.palette.primary.dark
+
   const isNonMobile = useMediaQuery('(min-width:600px)')
   const form = useRef()
 
@@ -61,15 +67,15 @@ const Contact = () => {
       flexDirection={'column'}
       justifyContent="center"
       alignItems="center"
-      bgcolor="#17252A"
+      bgcolor={dark}
       flex={1}
       p="80px"
     >
-      <Typography variant="h3" color="#3AAFA9">
+      <Typography variant="h3" color={main} fontWeight={500}>
         CONTACT ME
       </Typography>{' '}
       <Box p="1rem 0" mt="20px" width={'22vw'}>
-        <Typography variant="h4" color={'#3AAFA9'} fontWeight="500" mb="1rem">
+        <Typography variant="h4" color={main} fontWeight="500" mb="1rem">
           Socials
         </Typography>
 
@@ -86,7 +92,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant="h5" color={'#DEF2F1'} fontWeight="500">
+              <Typography variant="h5" color={secondLight} fontWeight="500">
                 LinkedIn
               </Typography>
             </Link>
@@ -96,7 +102,7 @@ const Contact = () => {
             sx={{ textDecoration: 'none' }}
             color="inherit"
           >
-            <EditOutlined sx={{ color: '#DEF2F1' }} />
+            <EditOutlined sx={{ color: secondLight }} />
           </Link>
         </FlexBetween>
         <FlexBetween gap="1rem" mb="1rem">
@@ -112,7 +118,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant="h5" color={'#DEF2F1'} fontWeight="500">
+              <Typography variant="h5" color={secondLight} fontWeight="500">
                 Twitter
               </Typography>
             </Link>
@@ -122,13 +128,13 @@ const Contact = () => {
             sx={{ textDecoration: 'none' }}
             color="inherit"
           >
-            <EditOutlined sx={{ color: '#DEF2F1' }} />
+            <EditOutlined sx={{ color: secondLight }} />
           </Link>
         </FlexBetween>
       </Box>
       <Divider color="white" />
       <Box mt="20px" width={'22vw'}>
-        <Typography variant="h4" color={'#3AAFA9'} fontWeight="500">
+        <Typography variant="h4" color={main} fontWeight="500">
           Email
         </Typography>{' '}
         <Formik
@@ -165,7 +171,7 @@ const Contact = () => {
                     Boolean(touched.user_name) && Boolean(errors.user_name)
                   }
                   helperText={touched.user_name && errors.user_name}
-                  sx={{ gridColumn: 'span 4', bgcolor: '#DEF2F1' }}
+                  sx={{ gridColumn: 'span 4', bgcolor: secondLight }}
                 />{' '}
                 <TextField
                   label="Your Email"
@@ -177,7 +183,7 @@ const Contact = () => {
                     Boolean(touched.user_email) && Boolean(errors.user_email)
                   }
                   helperText={touched.user_email && errors.user_email}
-                  sx={{ gridColumn: 'span 4', bgcolor: '#DEF2F1' }}
+                  sx={{ gridColumn: 'span 4', bgcolor: secondLight }}
                 />
                 <TextField
                   label="Message"
@@ -188,7 +194,7 @@ const Contact = () => {
                   multiline
                   error={Boolean(touched.message) && Boolean(errors.message)}
                   helperText={touched.message && errors.message}
-                  sx={{ gridColumn: 'span 4', bgcolor: '#DEF2F1' }}
+                  sx={{ gridColumn: 'span 4', bgcolor: secondLight }}
                 />
               </Box>
 
@@ -200,9 +206,9 @@ const Contact = () => {
                   sx={{
                     m: '2rem 0',
                     p: '1rem',
-                    backgroundColor: '#2B7A78',
+                    backgroundColor: secondMain,
                     color: 'white',
-                    '&:hover': { color: 'white', backgroundColor: '#3AAFA9' },
+                    '&:hover': { color: 'white', backgroundColor: main },
                   }}
                 >
                   {'SEND'}

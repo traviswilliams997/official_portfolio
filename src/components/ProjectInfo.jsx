@@ -1,25 +1,30 @@
 import { Box, Stack, Typography, Link } from '@mui/material'
 import { GitHub, Launch } from '@mui/icons-material'
 import { styled } from '@mui/system'
+import { theme } from '../theme'
+
 const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
+  const main = theme.palette.primary.main
+  const secondLight = theme.palette.secondary.light
+  const dark = theme.palette.primary.dark
   const StackText = styled(Typography)(({}) => ({
-    color: '#3AAFA9',
+    color: main,
   }))
   const BottomText = styled(Typography)(({}) => ({
-    color: '#3AAFA9',
+    color: main,
   }))
 
   const StyledGithub = styled(GitHub)(({}) => ({
-    color: '#3AAFA9',
+    color: main,
   }))
 
   const StyledLaunch = styled(Launch)(({}) => ({
-    color: '#3AAFA9',
+    color: main,
   }))
 
   return (
     <Box
-      bgcolor="#DEF2F1"
+      bgcolor={secondLight}
       flex={1}
       height="450px"
       display="flex"
@@ -30,12 +35,12 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
       pb="30px"
     >
       <Stack width="500px">
-        <Typography variant="h3" color="#17252A">
+        <Typography variant="h3" color={dark}>
           {' '}
           {title}
         </Typography>
         <Stack display="flex" flexDirection="column" justifyContent="center">
-          <Typography variant="h5" color="#17252A" mt="30px">
+          <Typography variant="h5" color={dark} mt="30px">
             {' '}
             {text}
           </Typography>
@@ -54,11 +59,11 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               mr="25px"
               sx={{
                 '&:hover': {
-                  border: '1.5px solid #3AAFA9',
+                  border: `1.5px solid ${main}`,
                 },
                 transition: 'all 0.5s',
               }}
-              borderBottom="1.5px solid #3AAFA9"
+              borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
               <BottomText variant="h6">
@@ -77,10 +82,10 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               display="flex"
               ml="25px"
               sx={{
-                '&:hover': { border: '1.5px solid #3AAFA9' },
+                '&:hover': { border: `1.5px solid ${main}` },
                 transition: 'all 0.5s',
               }}
-              borderBottom="1.5px solid #3AAFA9"
+              borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
               <BottomText variant="h6">

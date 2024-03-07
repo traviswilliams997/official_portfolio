@@ -46,7 +46,7 @@ const Projects = ({}) => {
           text={
             "This website scrapes job postings from the official Jamaican Ministry's career pages; so you can easily find them all in one place."
           }
-          title={'MINISTRY JOBS JA'}
+          title={'Public Service Jobs JA'}
           repoLink={'https://github.com/traviswilliams997/Ministry-Jobs-JA'}
           liveDemoLink={'https://traviswilliams997.github.io/ETCH-A-SKETCH/'}
           stack={scrapeStack}
