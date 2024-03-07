@@ -78,6 +78,32 @@ const Contact = () => {
         <Typography variant="h4" color={main} fontWeight="500" mb="1rem">
           Socials
         </Typography>
+        <FlexBetween gap="1rem" mb="1rem">
+          <FlexBetween gap="1rem">
+            <img
+              height="50px"
+              width="50px"
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+              alt="github"
+            />
+            <Link
+              href={'https://github.com/traviswilliams997'}
+              sx={{ textDecoration: 'none' }}
+              color="inherit"
+            >
+              <Typography variant="h5" color={secondLight} fontWeight="500">
+                GitHub
+              </Typography>
+            </Link>
+          </FlexBetween>
+          <Link
+            href={'https://github.com/traviswilliams997'}
+            sx={{ textDecoration: 'none' }}
+            color="inherit"
+          >
+            <EditOutlined sx={{ color: secondLight }} />
+          </Link>
+        </FlexBetween>
 
         <FlexBetween gap="1rem" mb="1rem">
           <FlexBetween gap="1rem">
