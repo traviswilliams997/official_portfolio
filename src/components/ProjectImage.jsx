@@ -1,10 +1,10 @@
 import { Box } from '@mui/material'
-
+import { theme } from '../theme'
 const ProjectImage = ({ imgUrl }) => {
   return (
     <Box
       display="flex"
-      bgcolor="#DEF2F1"
+      bgcolor={theme.palette.secondary.light}
       flex={1}
       height="450px"
       pt="40px"
