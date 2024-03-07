@@ -1,9 +1,9 @@
 .profile {
   position: absolute;
   text-outline: 0 0 #000;
-  top: 8%;
+  top: 14%;
   left: 53%;
-  border: 5px solid #17252a;
+  border: 5px solid hsl(196, 29%, 13%);
   border-radius: 5%;
 }
 

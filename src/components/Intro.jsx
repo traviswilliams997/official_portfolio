@@ -10,8 +10,8 @@ const Intro = () => {
       <img
         className="profile"
         src="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709747635/uhjohchdi1nsdjzuccyk.jpg"
-        height="300px"
-        width="300px"
+        height="450px"
+        width="450px"
       ></img>
       <TopRight />
     </Stack>

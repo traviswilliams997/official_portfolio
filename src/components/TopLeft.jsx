@@ -13,22 +13,22 @@ const TopLeft = () => {
       display="flex"
       justifyContent="center"
     >
-      <Stack mt="40px">
-        <Typography variant="h2" fontWeight={700} color={light}>
+      <Stack mt="6vh">
+        <Typography variant="h1" fontWeight={700} color={light}>
           Software
         </Typography>
-        <Typography variant="h2" fontWeight={700} color={light}>
+        <Typography variant="h1" fontWeight={700} color={light}>
           Engineer.
         </Typography>
-        <Typography variant="h5" fontWeight={400} color={dark} width="500px">
+        <Typography variant="h4" fontWeight={400} color={dark} width="650px">
           Focused on solving real problems that add measurable gains to the
           bottom line.
         </Typography>
         <Typography
-          variant="h6"
+          variant="h5"
           fontWeight={100}
           color={dark}
-          width="350px"
+          width="650px"
           mt="10px"
         >
           I achieve this by crafting: modular, well tested, maintainable and
