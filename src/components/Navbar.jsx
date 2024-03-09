@@ -73,19 +73,21 @@ const Navbar = () => {
                   ml: '50px',
                 }}
               >
-                <Typography
+                <Link
                   color={secondLight}
                   variant="h5"
                   sx={{
+                    textDecoration: 'none',
                     '&:hover': {
-                      color: secondLight,
-                      fontWeight: '800',
+                      color: dark,
+                      fontWeight: '900',
                     },
                   }}
                   fontWeight={700}
+                  href="https://drive.google.com/file/d/1P_1hzu4vILGWtwHoQL7mOWAxXd8KvVWj/view?usp=drive_link"
                 >
                   Resume
-                </Typography>
+                </Link>
               </Button>
             </FlexBetween>
           </Stack>
