@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Button } from '@mui/material'
+import { Box, Stack, Typography, Button, Link } from '@mui/material'
 import FlexBetween from './FlexBetween'
 import { styled } from '@mui/system'
 
@@ -12,11 +12,12 @@ const Navbar = () => {
   const main = theme.palette.primary.main
   const light = theme.palette.primary.light
 
-  const NavLink = styled(Typography)(({}) => ({
+  const NavLink = styled(Link)(({}) => ({
     color: secondLight,
     fontWeight: '500',
     marginLeft: '20px',
     marginRight: '20px',
+    textDecoration: 'none',
     '&:hover': { borderBottom: `3px solid ${secondLight}` },
   }))
 
@@ -54,9 +55,15 @@ const Navbar = () => {
         >
           <Stack mt="10px">
             <FlexBetween pt="5px">
-              <NavLink variant="h4">Projects</NavLink>
-              <NavLink variant="h4">About</NavLink>
-              <NavLink variant="h4">Contacts</NavLink>
+              <NavLink variant="h4" href="#projects">
+                Projects
+              </NavLink>
+              <NavLink variant="h4" href="#about">
+                About
+              </NavLink>
+              <NavLink variant="h4" href="#contact">
+                Contacts
+              </NavLink>
               <Button
                 sx={{
                   bgcolor: dark,
@@ -66,19 +73,21 @@ const Navbar = () => {
                   ml: '50px',
                 }}
               >
-                <Typography
+                <Link
                   color={secondLight}
                   variant="h5"
                   sx={{
+                    textDecoration: 'none',
                     '&:hover': {
-                      color: secondLight,
-                      fontWeight: '800',
+                      color: dark,
+                      fontWeight: '900',
                     },
                   }}
                   fontWeight={700}
+                  href="https://drive.google.com/file/d/1P_1hzu4vILGWtwHoQL7mOWAxXd8KvVWj/view?usp=drive_link"
                 >
                   Resume
-                </Typography>
+                </Link>
               </Button>
             </FlexBetween>
           </Stack>
