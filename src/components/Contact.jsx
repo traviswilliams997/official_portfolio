@@ -70,6 +70,7 @@ const Contact = () => {
       bgcolor={dark}
       flex={1}
       p="80px"
+      id="contact"
     >
       <Typography variant="h2" color={main} fontWeight={500}>
         CONTACT ME

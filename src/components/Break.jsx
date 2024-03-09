@@ -13,7 +13,7 @@ const Break = () => {
       flex={1}
       height="110px"
     >
-      <Typography variant="h2" fontWeight={500} color={light}>
+      <Typography variant="h2" fontWeight={500} color={light} id="projects">
         PROJECTS
       </Typography>
     </Box>

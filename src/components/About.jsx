@@ -17,6 +17,7 @@ const About = () => {
         color={theme.palette.primary.dark}
         fontWeight={500}
         pb="40px"
+        id="about"
       >
         ABOUT
       </Typography>
