@@ -1,14 +1,15 @@
-import { Box, Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
 import { theme } from '../theme.js'
 const TopLeft = () => {
   const main = theme.palette.primary.main
   const dark = theme.palette.primary.dark
   const light = theme.palette.primary.light
+  const isDisplayLinks = useMediaQuery('(min-width:1100px)')
 
   return (
     <Box
       bgcolor={main}
-      flex={10}
+      flex={isDisplayLinks ? 10 : 1}
       height="46vh"
       display="flex"
       justifyContent="center"
