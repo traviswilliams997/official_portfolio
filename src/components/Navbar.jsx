@@ -4,11 +4,14 @@ import {
   Typography,
   Button,
   Link,
+  Menu,
+  MenuItem,
   useMediaQuery,
 } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
 import FlexBetween from './FlexBetween'
 import { styled } from '@mui/system'
-
+import { useState } from 'react'
 import { theme } from '../theme'
 
 const Navbar = () => {
@@ -23,6 +26,8 @@ const Navbar = () => {
   const isDispayLinks = useMediaQuery('(min-width:1100px)')
   const isDisplay = useMediaQuery('(min-width:1100px)')
 
+  const [open, setOpen] = useState(false)
+
   const NavLink = styled(Link)(({}) => ({
     color: secondLight,
     fontWeight: '500',
@@ -32,6 +37,13 @@ const Navbar = () => {
     '&:hover': { borderBottom: `3px solid ${secondLight}` },
   }))
 
+  const MenuLink = styled(Link)(({}) => ({
+    color: dark,
+    fontWeight: '500',
+    textDecoration: 'none',
+    '&:hover': { borderBottom: `3px solid ${dark}` },
+  }))
+
   return (
     <Box>
       <Stack direction="row" height="80px" sx={{ position: 'relative' }}>
@@ -39,7 +51,7 @@ const Navbar = () => {
           display="flex"
           bgcolor={main}
           flexBasis={isDispayLinks ? '62.5%' : '100%'}
-          justifyContent="left"
+          justifyContent={'space-between'}
         >
           <Stack>
             {' '}
@@ -50,11 +62,66 @@ const Navbar = () => {
               mt="20px"
               ml="135px"
               sx={{ '&:hover': { color: dark } }}
+              id="home"
             >
               {' '}
               TRAVIS WILLIAMS
             </Typography>
           </Stack>
+          {!isDispayLinks && (
+            <Box mt="19px">
+              <MenuIcon
+                onClick={() => setOpen(true)}
+                sx={{ height: '60px', width: '60px', color: light }}
+              />
+              <Menu
+                id="positioned-menu"
+                aria-labelledby="positioned-button"
+                open={open}
+                onClose={(e) => setOpen(false)}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+              >
+                <MenuItem>
+                  <MenuLink variant="h5" href="#home">
+                    Home
+                  </MenuLink>{' '}
+                </MenuItem>
+                <MenuItem>
+                  <MenuLink variant="h5" href="#projects">
+                    Projects
+                  </MenuLink>
+                </MenuItem>
+                <MenuItem>
+                  {' '}
+                  <MenuLink variant="h5" href="#about">
+                    About{' '}
+                  </MenuLink>
+                </MenuItem>
+                <MenuItem>
+                  {' '}
+                  <MenuLink variant="h5" href="#contact">
+                    Contact{' '}
+                  </MenuLink>
+                </MenuItem>
+                <MenuItem>
+                  {' '}
+                  <MenuLink
+                    variant="h5"
+                    href="https://drive.google.com/file/d/1P_1hzu4vILGWtwHoQL7mOWAxXd8KvVWj/view?usp=drive_link"
+                  >
+                    Resume{' '}
+                  </MenuLink>
+                </MenuItem>
+              </Menu>
+            </Box>
+          )}
         </Box>
         {isDispayLinks && (
           <Box
