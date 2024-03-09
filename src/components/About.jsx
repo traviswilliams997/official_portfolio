@@ -1,7 +1,9 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import { theme } from '../theme'
 
 const About = () => {
+  const isMediumScreen = useMediaQuery('(min-width:1100px)')
+
   return (
     <Box
       display="flex"
@@ -10,18 +12,22 @@ const About = () => {
       alignItems="center"
       bgcolor={theme.palette.primary.main}
       flex={1}
-      p="80px"
+      p={isMediumScreen ? '80px' : '20px'}
     >
       <Typography
-        variant="h1"
+        variant={isMediumScreen ? 'h1' : 'h3'}
         color={theme.palette.primary.dark}
         fontWeight={500}
-        pb="40px"
+        pb={isMediumScreen ? '40px' : '10px'}
         id="about"
       >
         ABOUT
       </Typography>
-      <Typography variant="h4" color={theme.palette.primary.dark} width="50vw">
+      <Typography
+        variant={isMediumScreen ? 'h4' : 'h6'}
+        color={theme.palette.primary.dark}
+        width={isMediumScreen ? '50vw' : '90vw'}
+      >
         <b>I Am Grateful.</b> I am grateful for many things, but I am
         particularly grateful to all: engineers, inventors and scientists; past
         and present. <b>I Am</b> repaying this gratitude by,{' '}

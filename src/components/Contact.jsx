@@ -22,6 +22,8 @@ const Contact = () => {
   const dark = theme.palette.primary.dark
 
   const isNonMobile = useMediaQuery('(min-width:600px)')
+  const isMediumScreen = useMediaQuery('(min-width:1100px)')
+
   const form = useRef()
 
   const schema = yup.object().shape({
@@ -72,11 +74,20 @@ const Contact = () => {
       p="80px"
       id="contact"
     >
-      <Typography variant="h2" color={main} fontWeight={500}>
+      <Typography
+        variant={isMediumScreen ? 'h1' : 'h3'}
+        color={main}
+        fontWeight={500}
+      >
         CONTACT ME
       </Typography>{' '}
       <Box p="1rem 0" mt="20px" width={'22vw'}>
-        <Typography variant="h3" color={main} fontWeight="500" mb="1rem">
+        <Typography
+          variant={isMediumScreen ? 'h2' : 'h4'}
+          color={main}
+          fontWeight="500"
+          mb="1rem"
+        >
           Socials
         </Typography>
         <FlexBetween gap="1rem" mb="1rem">
@@ -92,7 +103,11 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant="h4" color={secondLight} fontWeight="500">
+              <Typography
+                variant={isMediumScreen ? 'h3' : 'h5'}
+                color={secondLight}
+                fontWeight="500"
+              >
                 GitHub
               </Typography>
             </Link>
@@ -119,7 +134,11 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant="h4" color={secondLight} fontWeight="500">
+              <Typography
+                variant={isMediumScreen ? 'h3' : 'h5'}
+                color={secondLight}
+                fontWeight="500"
+              >
                 LinkedIn
               </Typography>
             </Link>
@@ -145,7 +164,11 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant="h4" color={secondLight} fontWeight="500">
+              <Typography
+                variant={isMediumScreen ? 'h3' : 'h5'}
+                color={secondLight}
+                fontWeight="500"
+              >
                 Twitter
               </Typography>
             </Link>
@@ -161,7 +184,11 @@ const Contact = () => {
       </Box>
       <Divider color="white" />
       <Box mt="20px" width={'22vw'}>
-        <Typography variant="h3" color={main} fontWeight="500">
+        <Typography
+          variant={isMediumScreen ? 'h2' : 'h4'}
+          color={main}
+          fontWeight="500"
+        >
           Email
         </Typography>{' '}
         <Formik

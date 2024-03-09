@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Link } from '@mui/material'
+import { Box, Stack, Typography, Link, useMediaQuery } from '@mui/material'
 import { GitHub, Launch } from '@mui/icons-material'
 import { styled } from '@mui/system'
 import { theme } from '../theme'
@@ -7,6 +7,9 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
   const main = theme.palette.primary.main
   const secondLight = theme.palette.secondary.light
   const dark = theme.palette.primary.dark
+
+  const isMediumScreen = useMediaQuery('(min-width:1100px)')
+
   const StackText = styled(Typography)(({}) => ({
     color: main,
   }))
@@ -34,20 +37,28 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
       pr="30px"
       pb="30px"
     >
-      <Stack width="500px">
-        <Typography variant="h3" color={dark}>
+      <Stack width={isMediumScreen ? '500px' : '400px'}>
+        <Typography variant={isMediumScreen ? 'h3' : 'h4'} color={dark}>
           {' '}
           {title}
         </Typography>
         <Stack display="flex" flexDirection="column" justifyContent="center">
-          <Typography variant="h5" color={dark} mt="30px">
+          <Typography
+            variant={isMediumScreen ? 'h5' : 'h6'}
+            color={dark}
+            mt="30px"
+          >
             {' '}
             {text}
           </Typography>
           <Box display="flex" mt="20px">
             {stack &&
               stack.map((s) => (
-                <StackText variant="h6" mr="20px" key={s}>
+                <StackText
+                  variant={isMediumScreen ? 'h6' : 'h7'}
+                  mr={isMediumScreen ? '20px' : '10px'}
+                  key={s}
+                >
                   {' '}
                   {s}
                 </StackText>
@@ -66,7 +77,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
-              <BottomText variant="h6">
+              <BottomText variant={isMediumScreen ? 'h6' : 'h7'}>
                 {' '}
                 <Link
                   href={repoLink}

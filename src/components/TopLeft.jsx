@@ -10,19 +10,27 @@ const TopLeft = () => {
     <Box
       bgcolor={main}
       flex={isDisplayLinks ? 10 : 1}
-      height="46vh"
+      height={isDisplayLinks ? '46vh' : '60vh'}
       display="flex"
       justifyContent="center"
     >
       <Stack mt="6vh">
-        <Typography variant="h1" fontWeight={700} color={light}>
+        <Typography
+          variant={isDisplayLinks ? 'h1' : 'h3'}
+          fontWeight={700}
+          color={light}
+        >
           Software
         </Typography>
-        <Typography variant="h1" fontWeight={700} color={light}>
+        <Typography
+          variant={isDisplayLinks ? 'h1' : 'h3'}
+          fontWeight={700}
+          color={light}
+        >
           Engineer.
         </Typography>
         <Typography
-          variant="h4"
+          variant={isDisplayLinks ? 'h4' : 'h5'}
           fontWeight={400}
           color={dark}
           width={isDisplayLinks ? '650px' : '300px'}
@@ -31,7 +39,7 @@ const TopLeft = () => {
           bottom line.
         </Typography>
         <Typography
-          variant="h5"
+          variant={isDisplayLinks ? 'h5' : 'h6'}
           fontWeight={100}
           color={dark}
           width={isDisplayLinks ? '650px' : '300px'}

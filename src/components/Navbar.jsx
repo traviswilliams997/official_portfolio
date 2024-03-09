@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const isDisplayResume = useMediaQuery('(min-width:1900px)')
   const isDisplayContact = useMediaQuery('(min-width:1300px)')
-  const isDispayLinks = useMediaQuery('(min-width:1100px)')
+  const isMediumScreen = useMediaQuery('(min-width:1100px)')
   const isDisplay = useMediaQuery('(min-width:1100px)')
 
   const [open, setOpen] = useState(false)
@@ -50,17 +50,17 @@ const Navbar = () => {
         <Box
           display="flex"
           bgcolor={main}
-          flexBasis={isDispayLinks ? '62.5%' : '100%'}
+          flexBasis={isMediumScreen ? '62.5%' : '100%'}
           justifyContent={'space-between'}
         >
           <Stack>
             {' '}
             <Typography
-              variant="h3"
+              variant={isMediumScreen ? 'h3' : 'h5'}
               fontWeight={700}
               color={light}
-              mt="20px"
-              ml="135px"
+              mt={isMediumScreen ? '20px' : '10px'}
+              ml={isMediumScreen ? '135px' : '65px'}
               sx={{ '&:hover': { color: dark } }}
               id="home"
             >
@@ -68,11 +68,15 @@ const Navbar = () => {
               TRAVIS WILLIAMS
             </Typography>
           </Stack>
-          {!isDispayLinks && (
-            <Box mt="19px">
+          {!isMediumScreen && (
+            <Box mt={isMediumScreen ? '20px' : '10px'}>
               <MenuIcon
                 onClick={() => setOpen(true)}
-                sx={{ height: '60px', width: '60px', color: light }}
+                sx={{
+                  height: isMediumScreen ? '60px' : '30px',
+                  width: isMediumScreen ? '60px' : '30px',
+                  color: light,
+                }}
               />
               <Menu
                 id="positioned-menu"
@@ -123,7 +127,7 @@ const Navbar = () => {
             </Box>
           )}
         </Box>
-        {isDispayLinks && (
+        {isMediumScreen && (
           <Box
             sx={{ display: isDisplay ? 'flex' : 'none' }}
             bgcolor={secondMain}
