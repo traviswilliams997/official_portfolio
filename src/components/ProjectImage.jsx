@@ -18,7 +18,7 @@ const ProjectImage = ({ imgUrl }) => {
       <img
         className="project"
         src={imgUrl}
-        width={isLargeScreen ? '1000px' : '600px'}
+        width={isLargeScreen ? '1000px' : '550px'}
       ></img>
     </Box>
   )

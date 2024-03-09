@@ -21,7 +21,12 @@ const TopLeft = () => {
         <Typography variant="h1" fontWeight={700} color={light}>
           Engineer.
         </Typography>
-        <Typography variant="h4" fontWeight={400} color={dark} width="650px">
+        <Typography
+          variant="h4"
+          fontWeight={400}
+          color={dark}
+          width={isDisplayLinks ? '650px' : '300px'}
+        >
           Focused on solving real problems that add measurable gains to the
           bottom line.
         </Typography>
@@ -29,7 +34,7 @@ const TopLeft = () => {
           variant="h5"
           fontWeight={100}
           color={dark}
-          width="650px"
+          width={isDisplayLinks ? '650px' : '300px'}
           mt="10px"
         >
           I achieve this by crafting: modular, well tested, maintainable and
