@@ -151,36 +151,6 @@ const Contact = () => {
             <EditOutlined sx={{ color: secondLight }} />
           </Link>
         </FlexBetween>
-        <FlexBetween gap="1rem" mb="1rem">
-          <FlexBetween gap="1rem">
-            <img
-              height="50px"
-              width="50px"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
-              alt="twitter"
-            />
-            <Link
-              href={'https://twitter.com/travis_87x'}
-              sx={{ textDecoration: 'none' }}
-              color="inherit"
-            >
-              <Typography
-                variant={isMediumScreen ? 'h3' : 'h5'}
-                color={secondLight}
-                fontWeight="500"
-              >
-                Twitter
-              </Typography>
-            </Link>
-          </FlexBetween>
-          <Link
-            href={'https://twitter.com/travis_87x'}
-            sx={{ textDecoration: 'none' }}
-            color="inherit"
-          >
-            <EditOutlined sx={{ color: secondLight }} />
-          </Link>
-        </FlexBetween>
       </Box>
       <Divider color="white" />
       <Box mt="20px" width={'22vw'}>
