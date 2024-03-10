@@ -37,7 +37,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
       pr="30px"
       pb="30px"
     >
-      <Stack width={isMediumScreen ? '500px' : '400px'}>
+      <Stack width={isMediumScreen ? '500px' : '330px'}>
         <Typography variant={isMediumScreen ? 'h3' : 'h4'} color={dark}>
           {' '}
           {title}
@@ -51,12 +51,13 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
             {' '}
             {text}
           </Typography>
-          <Box display="flex" mt="20px">
+          <Box display="flex" mt={isMediumScreen ? '20px' : '5px'}>
             {stack &&
               stack.map((s) => (
                 <StackText
                   variant={isMediumScreen ? 'h6' : 'h7'}
-                  mr={isMediumScreen ? '20px' : '10px'}
+                  fontSize={isMediumScreen ? '18px' : '14px'}
+                  mr={isMediumScreen ? '20px' : '3px'}
                   key={s}
                 >
                   {' '}
@@ -64,7 +65,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
                 </StackText>
               ))}
           </Box>
-          <Box display="flex" mt="20px">
+          <Box display="flex" mt={isMediumScreen ? '20px' : '5px'}>
             <Box
               display="flex"
               mr="25px"
@@ -99,7 +100,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
-              <BottomText variant="h6">
+              <BottomText variant={isMediumScreen ? 'h6' : 'h7'}>
                 {' '}
                 <Link
                   href={liveDemoLink}
