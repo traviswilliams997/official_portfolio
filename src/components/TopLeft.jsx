@@ -1,5 +1,6 @@
 import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
 import { theme } from '../theme.js'
+import { motion } from 'framer-motion'
 const TopLeft = () => {
   const main = theme.palette.primary.main
   const dark = theme.palette.primary.dark
@@ -14,7 +15,22 @@ const TopLeft = () => {
       display="flex"
       justifyContent="center"
     >
-      <Stack mt="6vh">
+      <Stack
+        mt="6vh"
+        component={motion.div}
+        initial={{
+          x: -500,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+            staggerChildren: 0.1,
+          },
+        }}
+      >
         <Typography
           variant={isDisplayLinks ? 'h1' : 'h3'}
           fontWeight={700}
