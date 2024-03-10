@@ -53,11 +53,11 @@ const Projects = ({}) => {
               title={'Public Service Jobs JA'}
               repoLink={'https://github.com/traviswilliams997/Ministry-Jobs-JA'}
               liveDemoLink={
-                'https://traviswilliams997.github.io/ETCH-A-SKETCH/'
+                'https://public-service-jobs-frontend.onrender.com/'
               }
               stack={scrapeStack}
             />
-            <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709723720/zing3ta5hvavxlbdzan2.png" />
+            <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1710111528/mpnhlc3ubsrowbjdxag9.png" />
           </Stack>
           <Stack direction="row">
             <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709724792/gkanyyhlgjsozmsbo47h.png" />
