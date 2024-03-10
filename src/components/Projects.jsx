@@ -41,7 +41,7 @@ const Projects = ({}) => {
               repoLink={
                 'https://github.com/traviswilliams997/jamaica_volunteer_platform'
               }
-              liveDemoLink={'https://jamaica-volunteer-platform.fly.dev/'}
+              liveDemoLink={'https://volunteer-platform-frontend.onrender.com'}
               stack={volunteeringStack}
             />
           </Stack>
