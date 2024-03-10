@@ -13,7 +13,7 @@ import FlexBetween from './FlexBetween'
 import { styled } from '@mui/system'
 import { useState } from 'react'
 import { theme } from '../theme'
-
+import { motion } from 'framer-motion'
 const Navbar = () => {
   const dark = theme.palette.primary.dark
   const secondMain = theme.palette.secondary.main
@@ -58,11 +58,15 @@ const Navbar = () => {
             <Typography
               variant={isMediumScreen ? 'h3' : 'h5'}
               fontWeight={700}
+              component={motion.span}
               color={light}
               mt={isMediumScreen ? '20px' : '10px'}
               ml={isMediumScreen ? '135px' : '65px'}
               sx={{ '&:hover': { color: dark } }}
               id="home"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
             >
               {' '}
               TRAVIS WILLIAMS
