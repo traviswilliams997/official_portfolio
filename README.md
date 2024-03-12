@@ -1,6 +1,6 @@
 # official_portfolio
 
-# Project info
+# Project Info
 This is the offical portfolio of Travis Williams
 
 # Live Demo
