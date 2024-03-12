@@ -1,8 +1,19 @@
-# React + Vite
+# official_portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project info
+This is the offical portfolio of Travis Williams
 
-Currently, two official plugins are available:
+# Live Demo
+Available at https://whimsical-naiad-37a6fe.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Behind the scenes
+* Vite
+* Material UI (MUI) for styling
+* Mobile responsive design with MUI
+* Animations with framer motion
+* Email.js for contact form
+* Formik is used to handle form state
+* Yup is used to validate user input
+
+
+
