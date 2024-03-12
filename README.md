@@ -15,5 +15,5 @@ Available at https://whimsical-naiad-37a6fe.netlify.app
 * Formik is used to handle form state
 * Yup is used to validate user input
 
-
-
+# Deployment
+* Static site build is deployed manualy on Netlify
