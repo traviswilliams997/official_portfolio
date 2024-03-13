@@ -8,6 +8,7 @@ const Break = () => {
   return (
     <Box
       display="flex"
+      flexDirection={'column'}
       justifyContent="center"
       alignItems="center"
       bgcolor={dark}
@@ -21,6 +22,13 @@ const Break = () => {
         id="projects"
       >
         PROJECTS
+      </Typography>
+      <Typography
+        variant={isMediumScreen ? 'h6' : 'h7'}
+        color={light}
+        id="projects"
+      >
+        *Hosted on free servers that take a minute to start up
       </Typography>
     </Box>
   )
