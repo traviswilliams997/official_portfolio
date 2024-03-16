@@ -88,7 +88,7 @@ const Projects = ({}) => {
               repoLink={
                 'https://github.com/traviswilliams997/jamaica_volunteer_platform'
               }
-              liveDemoLink={'https://jamaica-volunteer-platform.fly.dev/'}
+              liveDemoLink={'https://volunteer-platform-frontend.onrender.com'}
               stack={volunteeringStack}
             />
             <ProjectImage imgUrl="https://res.cloudinary.com/ddrcxv4fg/image/upload/v1709589357/veprlo1rwdkwe3fplt38.png" />
@@ -101,7 +101,7 @@ const Projects = ({}) => {
               title={'Public Service Jobs JA'}
               repoLink={'https://github.com/traviswilliams997/Ministry-Jobs-JA'}
               liveDemoLink={
-                'https://traviswilliams997.github.io/ETCH-A-SKETCH/'
+                'https://public-service-jobs-frontend.onrender.com/'
               }
               stack={scrapeStack}
             />
