@@ -38,7 +38,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
       pb="30px"
     >
       <Stack width={isMediumScreen ? '500px' : '330px'}>
-        <Typography variant={isMediumScreen ? 'h3' : 'h4'} color={dark}>
+        <Typography variant={'h3'} color={dark}>
           {' '}
           {title}
         </Typography>

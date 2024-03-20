@@ -6,6 +6,7 @@ import {
   TextField,
   Divider,
   Link,
+  useTheme,
 } from '@mui/material'
 import { EditOutlined } from '@mui/icons-material'
 import { Formik } from 'formik'
@@ -13,19 +14,17 @@ import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import FlexBetween from './FlexBetween'
-import { theme } from '../theme'
 
 const Contact = () => {
+  const theme = useTheme()
   const secondMain = theme.palette.secondary.main
   const secondLight = theme.palette.secondary.light
   const main = theme.palette.primary.main
   const dark = theme.palette.primary.dark
 
   const isNonMobile = useMediaQuery('(min-width:600px)')
-  const isMediumScreen = useMediaQuery('(min-width:1100px)')
 
   const form = useRef()
-
   const schema = yup.object().shape({
     user_name: yup.string().required('Required'),
     user_email: yup.string().email('Invalid email').required('Required'),
@@ -74,20 +73,11 @@ const Contact = () => {
       p="80px"
       id="contact"
     >
-      <Typography
-        variant={isMediumScreen ? 'h1' : 'h3'}
-        color={main}
-        fontWeight={500}
-      >
-        CONTACT ME
+      <Typography variant={'h1'} color={main} fontWeight={500}>
+        CONTACT
       </Typography>{' '}
-      <Box p="1rem 0" mt="20px" width={'22vw'}>
-        <Typography
-          variant={isMediumScreen ? 'h2' : 'h4'}
-          color={main}
-          fontWeight="500"
-          mb="1rem"
-        >
+      <Box p="1rem 0" mt="20px">
+        <Typography variant={'h2'} color={main} fontWeight={500} mb="1rem">
           Socials
         </Typography>
         <FlexBetween gap="1rem" mb="1rem">
@@ -103,11 +93,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography
-                variant={isMediumScreen ? 'h3' : 'h5'}
-                color={secondLight}
-                fontWeight="500"
-              >
+              <Typography variant={'h3'} color={secondLight} fontWeight="500">
                 GitHub
               </Typography>
             </Link>
@@ -134,11 +120,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography
-                variant={isMediumScreen ? 'h3' : 'h5'}
-                color={secondLight}
-                fontWeight="500"
-              >
+              <Typography variant={'h3'} color={secondLight} fontWeight="500">
                 LinkedIn
               </Typography>
             </Link>
@@ -153,12 +135,8 @@ const Contact = () => {
         </FlexBetween>
       </Box>
       <Divider color="white" />
-      <Box mt="20px" width={'22vw'}>
-        <Typography
-          variant={isMediumScreen ? 'h2' : 'h4'}
-          color={main}
-          fontWeight="500"
-        >
+      <Box mt="20px">
+        <Typography variant={'h2'} color={main} fontWeight="500">
           Email
         </Typography>{' '}
         <Formik

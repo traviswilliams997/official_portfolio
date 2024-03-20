@@ -1,7 +1,7 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import { theme } from '../theme'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 
 const About = () => {
+  const theme = useTheme()
   const isMediumScreen = useMediaQuery('(min-width:1100px)')
 
   return (
@@ -15,7 +15,7 @@ const About = () => {
       p={isMediumScreen ? '80px' : '20px'}
     >
       <Typography
-        variant={isMediumScreen ? 'h1' : 'h3'}
+        variant={'h1'}
         color={theme.palette.primary.dark}
         fontWeight={500}
         pb={isMediumScreen ? '40px' : '10px'}
@@ -24,7 +24,7 @@ const About = () => {
         ABOUT
       </Typography>
       <Typography
-        variant={isMediumScreen ? 'h4' : 'h6'}
+        variant={'h4'}
         color={theme.palette.primary.dark}
         width={isMediumScreen ? '50vw' : '90vw'}
       >

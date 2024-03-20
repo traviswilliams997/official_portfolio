@@ -1,8 +1,8 @@
-import { Box, useMediaQuery } from '@mui/material'
-import { theme } from '../theme'
+import { Box, useMediaQuery, useTheme } from '@mui/material'
 
 const TopRight = () => {
   const isDisplay = useMediaQuery('(min-width:1100px)')
+  const theme = useTheme()
 
   const main = theme.palette.secondary.main
   return (

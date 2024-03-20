@@ -1,7 +1,8 @@
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
-import { theme } from '../theme.js'
+import { Box, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 const TopLeft = () => {
+  const theme = useTheme()
+
   const main = theme.palette.primary.main
   const dark = theme.palette.primary.dark
   const light = theme.palette.primary.light
@@ -31,22 +32,14 @@ const TopLeft = () => {
           },
         }}
       >
-        <Typography
-          variant={isDisplayLinks ? 'h1' : 'h3'}
-          fontWeight={700}
-          color={light}
-        >
+        <Typography variant={'h1'} fontWeight={700} color={light}>
           Software
         </Typography>
-        <Typography
-          variant={isDisplayLinks ? 'h1' : 'h3'}
-          fontWeight={700}
-          color={light}
-        >
+        <Typography variant={'h1'} fontWeight={700} color={light}>
           Engineer.
         </Typography>
         <Typography
-          variant={isDisplayLinks ? 'h4' : 'h5'}
+          variant={'h4'}
           fontWeight={400}
           color={dark}
           width={isDisplayLinks ? '650px' : '300px'}
@@ -55,7 +48,7 @@ const TopLeft = () => {
           bottom line.
         </Typography>
         <Typography
-          variant={isDisplayLinks ? 'h5' : 'h6'}
+          variant={'h5'}
           fontWeight={100}
           color={dark}
           width={isDisplayLinks ? '650px' : '300px'}
