@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material'
-export const theme = createTheme({
+import { responsiveFontSizes } from '@mui/material/styles'
+const unResponsiveTheme = createTheme({
   palette: {
     primary: {
       main: '#3AAFA9',
@@ -12,3 +13,4 @@ export const theme = createTheme({
     },
   },
 })
+export const theme = responsiveFontSizes(unResponsiveTheme)

@@ -3,7 +3,6 @@ import { theme } from '../theme'
 const ProjectImage = ({ imgUrl }) => {
   const isLargeScreen = useMediaQuery('(min-width:1800px)')
   const isMediumScreen = useMediaQuery('(min-width:1100px)')
-
   const isSmallScreen = useMediaQuery('(min-width:800px)')
 
   return (

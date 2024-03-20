@@ -7,14 +7,16 @@ import {
   Menu,
   MenuItem,
   useMediaQuery,
+  useTheme,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import FlexBetween from './FlexBetween'
 import { styled } from '@mui/system'
 import { useState } from 'react'
-import { theme } from '../theme'
 import { motion } from 'framer-motion'
 const Navbar = () => {
+  const theme = useTheme()
+
   const dark = theme.palette.primary.dark
   const secondMain = theme.palette.secondary.main
   const secondLight = theme.palette.secondary.light
@@ -56,7 +58,7 @@ const Navbar = () => {
           <Stack>
             {' '}
             <Typography
-              variant={isMediumScreen ? 'h3' : 'h5'}
+              variant={'h3'}
               fontWeight={700}
               component={motion.span}
               color={light}

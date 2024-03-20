@@ -1,9 +1,8 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import { theme } from '../theme'
+import { Box, Typography, useTheme } from '@mui/material'
 const Break = () => {
+  const theme = useTheme()
   const dark = theme.palette.primary.dark
   const light = theme.palette.primary.light
-  const isMediumScreen = useMediaQuery('(min-width:1100px)')
 
   return (
     <Box
@@ -15,19 +14,10 @@ const Break = () => {
       flex={1}
       height="110px"
     >
-      <Typography
-        variant={isMediumScreen ? 'h2' : 'h4'}
-        fontWeight={500}
-        color={light}
-        id="projects"
-      >
+      <Typography variant={'h2'} fontWeight={500} color={light} id="projects">
         PROJECTS
       </Typography>
-      <Typography
-        variant={isMediumScreen ? 'h6' : 'h7'}
-        color={light}
-        id="projects"
-      >
+      <Typography variant={'h6'} color={light} id="projects">
         *Hosted on free servers that take a minute to start up
       </Typography>
     </Box>
