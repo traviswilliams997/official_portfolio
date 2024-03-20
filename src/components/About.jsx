@@ -32,11 +32,12 @@ const About = () => {
         particularly grateful to all: engineers, inventors and scientists; past
         and present. <b>I Am</b> repaying this gratitude by,{' '}
         <b> Dedicating My Life To Engineering</b>. Not just engineering, but
-        Solving problems and creating value. <b>I Am</b> allocating my fintite
+        Solving problems and Creating value. <b>I Am</b> allocating my finite
         time on earth to
         <b> Helping Improve The Lives Of Others</b>, in ways they do not yet
-        think is possible. Many things we take for granted today were thought to
-        be impossible. Unimaginable even. To this end of contribting to society,
+        believe is possible. Many things we take for granted today were thought
+        to be impossible. Unimaginable even. To this end of contribting to
+        society,
         <b>
           I Have Completed A Degree In Electrical And Computer Engineering;{' '}
         </b>
