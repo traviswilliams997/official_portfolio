@@ -1,9 +1,16 @@
-import { Box, Stack, Typography, Link, useMediaQuery } from '@mui/material'
+import {
+  Box,
+  Stack,
+  Typography,
+  Link,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import { GitHub, Launch } from '@mui/icons-material'
 import { styled } from '@mui/system'
-import { theme } from '../theme'
 
 const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
+  const theme = useTheme()
   const main = theme.palette.primary.main
   const secondLight = theme.palette.secondary.light
   const dark = theme.palette.primary.dark
@@ -29,7 +36,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
     <Box
       bgcolor={secondLight}
       flex={1}
-      height="450px"
+      height="490px"
       display="flex"
       justifyContent="center"
       pt="40px"
@@ -43,11 +50,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
           {title}
         </Typography>
         <Stack display="flex" flexDirection="column" justifyContent="center">
-          <Typography
-            variant={isMediumScreen ? 'h5' : 'h6'}
-            color={dark}
-            mt="30px"
-          >
+          <Typography variant={'h5'} color={dark} mt="30px">
             {' '}
             {text}
           </Typography>
@@ -55,7 +58,7 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
             {stack &&
               stack.map((s) => (
                 <StackText
-                  variant={isMediumScreen ? 'h6' : 'h7'}
+                  variant={'h6'}
                   fontSize={isMediumScreen ? '18px' : '14px'}
                   mr={isMediumScreen ? '20px' : '3px'}
                   key={s}
@@ -78,13 +81,9 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
-              <BottomText variant={isMediumScreen ? 'h6' : 'h7'}>
+              <BottomText variant={'h6'}>
                 {' '}
-                <Link
-                  href={repoLink}
-                  sx={{ textDecoration: 'none' }}
-                  color="inherit"
-                >
+                <Link href={repoLink} sx={{ textDecoration: 'none' }}>
                   Code
                 </Link>
               </BottomText>
@@ -100,13 +99,9 @@ const ProjectInfo = ({ text, title, repoLink, liveDemoLink, stack }) => {
               borderBottom={`1.5px solid ${main}`}
               p="5px"
             >
-              <BottomText variant={isMediumScreen ? 'h6' : 'h7'}>
+              <BottomText variant={'h6'}>
                 {' '}
-                <Link
-                  href={liveDemoLink}
-                  sx={{ textDecoration: 'none' }}
-                  color="inherit"
-                >
+                <Link href={liveDemoLink} sx={{ textDecoration: 'none' }}>
                   Live Demo
                 </Link>
               </BottomText>
