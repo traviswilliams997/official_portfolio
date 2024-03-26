@@ -12,11 +12,11 @@ const ProjectImage = ({ imgUrl }) => {
           display="flex"
           bgcolor={theme.palette.secondary.light}
           flex={1}
-          height="450px"
+          height="490px"
           pt="40px"
           pl={'50px'}
           pr={'50px'}
-          pb="30px"
+          pb="40px"
           justifyContent={'center'}
         >
           <img className="project" src={imgUrl} width={'1000px'}></img>
