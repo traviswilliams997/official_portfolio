@@ -15,7 +15,7 @@ const About = () => {
       p={isMediumScreen ? '80px' : '20px'}
     >
       <Typography
-        variant={'h1'}
+        variant={'h2'}
         color={theme.palette.primary.dark}
         fontWeight={500}
         pb={isMediumScreen ? '40px' : '10px'}

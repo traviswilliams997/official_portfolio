@@ -73,11 +73,11 @@ const Contact = () => {
       p="80px"
       id="contact"
     >
-      <Typography variant={'h1'} color={main} fontWeight={500}>
+      <Typography variant={'h2'} color={main} fontWeight={500}>
         CONTACT
       </Typography>{' '}
       <Box p="1rem 0" mt="20px">
-        <Typography variant={'h2'} color={main} fontWeight={500} mb="1rem">
+        <Typography variant={'h3'} color={main} fontWeight={500} mb="1rem">
           Socials
         </Typography>
         <FlexBetween gap="1rem" mb="1rem">
@@ -93,7 +93,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant={'h3'} color={secondLight} fontWeight="500">
+              <Typography variant={'h4'} color={secondLight} fontWeight="500">
                 GitHub
               </Typography>
             </Link>
@@ -120,7 +120,7 @@ const Contact = () => {
               sx={{ textDecoration: 'none' }}
               color="inherit"
             >
-              <Typography variant={'h3'} color={secondLight} fontWeight="500">
+              <Typography variant={'h4'} color={secondLight} fontWeight="500">
                 LinkedIn
               </Typography>
             </Link>
@@ -136,7 +136,7 @@ const Contact = () => {
       </Box>
       <Divider color="white" />
       <Box mt="20px">
-        <Typography variant={'h2'} color={main} fontWeight="500">
+        <Typography variant={'h3'} color={main} fontWeight="500">
           Email
         </Typography>{' '}
         <Formik
