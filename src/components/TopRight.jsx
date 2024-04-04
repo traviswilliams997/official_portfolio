@@ -10,6 +10,7 @@ const TopRight = () => {
       bgcolor={main}
       flex={6}
       height="46vh"
+      minHeight={'530px'}
       sx={{ display: isDisplay ? 'block' : 'none' }}
     ></Box>
   )

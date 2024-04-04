@@ -23,8 +23,8 @@ const Navbar = () => {
   const main = theme.palette.primary.main
   const light = theme.palette.primary.light
 
-  const isDisplayResume = useMediaQuery('(min-width:1900px)')
-  const isDisplayContact = useMediaQuery('(min-width:1300px)')
+  const isDisplayResume = useMediaQuery('(min-width:1300px)')
+  const isDisplayContact = useMediaQuery('(min-width:1900px)')
   const isMediumScreen = useMediaQuery('(min-width:1100px)')
   const isDisplay = useMediaQuery('(min-width:1100px)')
 

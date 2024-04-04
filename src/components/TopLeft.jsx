@@ -13,6 +13,7 @@ const TopLeft = () => {
       bgcolor={main}
       flex={isDisplayLinks ? 10 : 1}
       height={isDisplayLinks ? '46vh' : '60vh'}
+      minHeight={'530px'}
       display="flex"
       justifyContent="center"
     >
