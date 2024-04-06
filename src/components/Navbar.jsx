@@ -175,7 +175,7 @@ const Navbar = () => {
                         },
                       }}
                       fontWeight={700}
-                      href="https://drive.google.com/file/d/1P_1hzu4vILGWtwHoQL7mOWAxXd8KvVWj/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1EWeINIFhhwgFklALOeCQFaXtPYuTwRjW/view?usp=sharing"
                     >
                       Resume
                     </Link>
