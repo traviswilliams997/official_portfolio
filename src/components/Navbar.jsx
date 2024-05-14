@@ -124,7 +124,7 @@ const Navbar = () => {
                   {' '}
                   <MenuLink
                     variant="h5"
-                    href="https://drive.google.com/file/d/1P_1hzu4vILGWtwHoQL7mOWAxXd8KvVWj/view?usp=drive_link"
+                    href={import.meta.env.VITE_RESUME_LINK}
                   >
                     Resume{' '}
                   </MenuLink>
